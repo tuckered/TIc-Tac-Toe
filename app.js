@@ -4,7 +4,6 @@ let firstGame = true
 let turnCount
 let shape = 'X'
 let gameState
-let gameCounter = 0
 let playerInput
 let xPosition
 let yPosition
@@ -79,8 +78,8 @@ function checkIfValidInput(input) {
 
 function checkIfQuitGame(input) {
 	if (input.toLowerCase() === 'q') {
-		gameState = 'quit'
 		console.log('That\'s the end of the game.')
+		gameState = 'quit'
 	}
 }
 
@@ -136,7 +135,8 @@ function placeMoveOnGrid(x, y, board, shape) {
 function processInput() {
 	filterInput(playerInput)
 	checkInputIsValid(xPosition, yPosition,grid)
-	if (validMove === true) {
+	if (validMove) {
+		debugger
 		checkMoveIsValid(xPosition, yPosition, grid)
 	}
 }
@@ -190,7 +190,6 @@ function ifWinner() {
 function newGame() {
 	resetGame()
 	playGame()
-	gameCounter++
 }
 
 function winMessage() {
@@ -229,7 +228,7 @@ function playGame() {
 	while (turnCount < 10) {
 		receiveInput()
 		processInput()
-		if (validMove === true) {
+		if (validMove) {
 			applyMove()
 			checkForWinner(shape, grid)
 			ifWinner()

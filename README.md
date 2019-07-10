@@ -23,4 +23,4 @@ Here is a console version of the beloved classic, Tic Tac Toe.
  
  ## Further Work
  
- - I am aware that the checkForWinner() is not very elegant and does not adhere to DRY principles. Given how I set up my gameBoard, with an x and y coordinate I found it difficult to apply a solution that would work for all 8 conditions for winning, and be less code or easier to read. Any feedback on this or how I could go about it better would be much appreciated. 
+ - I am aware that the checkForWinner() is not very elegant and does not adhere to DRY principles. Given how I set up my gameBoard, with an x and y coordinate, I found it tricky to apply a solution that would work for all 8 win conditions , and be less code or any easier to read. Any feedback on this or how I could go about it better would be much appreciated. 
